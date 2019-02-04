@@ -12,7 +12,7 @@ export default class Navigation extends Component {
       },
       {
         id: 2,
-        path: "/about",
+        path: "/about/",
         name: "O mnie"
       },
       {
@@ -69,7 +69,6 @@ export default class Navigation extends Component {
                   className="nav-link"
                   onClick={this.handleCloseNavigation}
                 >
-                  {" "}
                   {link.name}
                 </Link>
               </li>

@@ -8,7 +8,7 @@ import SEO from "../components/seo";
 const SecondPage = ({ data }) => (
   <Layout>
     <SEO title="About" />
-    <main id="about">
+    <main className="about">
       <h1 className="lg-heading">
         O <span className="text-secondary">mnie</span>
       </h1>

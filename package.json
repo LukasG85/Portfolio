@@ -20,8 +20,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.3.0",
-    "typewriter-effect": "^2.5.2"
+    "react-icons": "^3.3.0"
   },
   "keywords": [
     "gatsby"

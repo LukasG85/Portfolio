@@ -12,16 +12,5 @@ export default function Product({ product }) {
         <Img fluid={fluid} alt="Project" />
       </a>
     </div>
-
-    // <ProductWrapper>
-    //   <Img fixed={fixed} className="img" />
-    //   <div className="text">
-    //     <div className="product-content">
-    //       <h3 className="name">{name}</h3>
-    //       <h3 className="price">{price} zł</h3>
-    //     </div>
-    //     <p className="info">{ingridients}</p>
-    //   </div>
-    // </ProductWrapper>
   );
 }

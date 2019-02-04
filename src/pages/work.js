@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
-import Project from "../components/pages/Project";
+import Project from "../components/global/Project";
 
 const WORKS = graphql`
   {
@@ -28,7 +28,7 @@ export default class work extends Component {
     return (
       <Layout>
         <SEO title="Work" />
-        <main id="work">
+        <main className="work">
           <h1 className="lg-heading">
             Moje <span className="text-secondary">projekty</span>
           </h1>
