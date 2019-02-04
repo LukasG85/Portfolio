@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+let letters;
+let cursorAnim;
+
 export default class Typing extends Component {
   state = {
     active: false
@@ -38,7 +41,7 @@ export default class Typing extends Component {
         }, 2000);
       }
 
-      setTimeout(addLetter, 100);
+      letters = setTimeout(addLetter, 100);
     };
 
     addLetter();
@@ -48,7 +51,12 @@ export default class Typing extends Component {
         active: !this.state.active
       });
     };
-    setInterval(cursorAnimation, 400);
+    cursorAnim = setInterval(cursorAnimation, 400);
+  }
+
+  componentWillUnmount() {
+    clearInterval(letters);
+    clearInterval(cursorAnim);
   }
 
   render() {
@@ -60,58 +68,3 @@ export default class Typing extends Component {
     );
   }
 }
-
-// import React from "react";
-
-// //Typing
-// const spnText = document.querySelector(".text");
-// const spnCursor = document.querySelector(".cursor");
-// const txt = [
-//   `Hi, I'm a web developer`,
-//   `I create websites`,
-//   `And mobile applications`
-// ];
-// console.log(spnCursor, spnText);
-// let acttiveLetter = -10;
-// let activeWord = 0;
-
-// const addLetter = () => {
-//   if (acttiveLetter >= 0) {
-//     spnText.textContent += txt[activeWord][acttiveLetter];
-//   }
-
-//   acttiveLetter++;
-
-//   if (acttiveLetter === txt[activeWord].length) {
-//     activeWord++;
-//     if (activeWord === txt.length) {
-//       activeWord = 0;
-//     }
-
-//     return setTimeout(() => {
-//       acttiveLetter = 0;
-//       spnText.textContent = "";
-//       addLetter();
-//     }, 2000);
-//   }
-
-//   setTimeout(addLetter, 100);
-// };
-
-// addLetter();
-
-// const cursorAnimation = () => {
-//   spnCursor.classList.toggle("active");
-// };
-// setInterval(cursorAnimation, 400);
-
-// function Typing() {
-//   return (
-//     <h2 className="sm-heading">
-//       <span className="text">{}</span>
-//       <span className="cursor">|</span>
-//     </h2>
-//   );
-// }
-
-// export default Typing;

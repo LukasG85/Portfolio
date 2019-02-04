@@ -134,6 +134,7 @@
 
     .bio-image {
         height: 20vh;
+        width: 20vh;
     }
 
     main#work {
@@ -144,5 +145,7 @@
 
     .projects {
         padding-top: 2rem;
+        grid-template-columns: 1fr;
+
     }
 }

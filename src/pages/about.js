@@ -13,7 +13,7 @@ const SecondPage = ({ data }) => (
         O <span className="text-secondary">mnie</span>
       </h1>
       <div className="about-info">
-        <Img fixed={data.file.childImageSharp.fixed} className="bio-image" />
+        <Img fluid={data.file.childImageSharp.fluid} className="bio-image" />
 
         <div className="bio">
           <h3 className="text-secondary">Cześć</h3>
@@ -39,8 +39,8 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "CV.jpg" }) {
       childImageSharp {
-        fixed(width: 240, height: 240) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        fluid(maxWidth: 240, maxHeight: 240) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

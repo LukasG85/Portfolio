@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    // font-family: 'Roboto', sans-serif;
 }
 
 .bg-img {
@@ -24,6 +25,10 @@ h3 {
 
     &.lg-heading {
         font-size: 6rem;
+
+        @media(max-width: 825px) {
+            font-size: 3rem;
+        }
     }
 
     &.sm-heading {
@@ -31,6 +36,10 @@ h3 {
         padding: 0.2rem 1rem;
         // background: rgba(lighten($primary-color, 2), 0.5);
         font-size: 2rem;
+
+        @media(max-width: 825px) {
+            font-size: 1.7rem;
+        }
     }
 }
 
@@ -85,6 +94,7 @@ main {
 
         h1 {
             margin-top: 20vh;
+
         }
     }
 
@@ -92,11 +102,22 @@ main {
     &.work {
         h1 {
             margin-bottom: 4rem;
+
+            @media(max-width: 825px) {
+                margin-bottom: 0;
+                margin-top: 3rem;
+            }
         }
+    }
+
+    @media(max-width: 825px) {
+        padding: 1rem;
     }
 }
 
 .about-info {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-areas: "bioimage bio bio";
     grid-template-columns: repeat(3, 1fr);
@@ -106,8 +127,10 @@ main {
     grid-area: bioimage;
     margin: auto;
     height: 30vh;
+    width: 30vh;
     border-radius: 50%;
     border: $secondary-color 3px solid;
+
 }
 
 .bio {
@@ -116,6 +139,7 @@ main {
 
     p {
         text-align: justify;
+        letter-spacing: 0.1rem;
     }
 }
 
@@ -126,6 +150,8 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.7rem;
+
+
 
 
     .item {

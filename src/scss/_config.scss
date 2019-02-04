@@ -3,6 +3,7 @@ $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url("../images/laptop.jpg");
 $background-opacity: 0.6;
+@import url('https://fonts.googleapis.com/css?family=Roboto:100i,400,900');
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
