@@ -63,7 +63,9 @@ export default class Typing extends Component {
     return (
       <h2 className="sm-heading">
         <span className="text" />
-        <span className="cursor">|</span>
+        <span className={this.state.active ? "cursor active" : "cursor"}>
+          |
+        </span>
       </h2>
     );
   }
