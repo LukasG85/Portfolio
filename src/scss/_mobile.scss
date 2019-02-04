@@ -1,0 +1,148 @@
+//Widescreens
+@include mediaXl {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+//Desktops & Laptops
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+//Tablets & Small Laptops
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 65vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 35vh;
+        transform: translate3d(100%, 0, 0);
+
+        .portrait {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .about-info {
+        grid-template-areas:
+            'bioimage'
+            'bio';
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include iPad {
+    .menu-branding {
+        .portrait {
+            width: 230px;
+            height: 230px;
+        }
+    }
+
+
+    main {
+        padding: 20px 50px 0 50px;
+    }
+
+    .about-info {
+        grid-template-areas:
+            'bioimage'
+            'bio';
+        grid-template-columns: 1fr;
+
+        img {
+            height: 20vh;
+            margin-bottom: 2rem;
+        }
+
+        .bio p {
+            text-align: justify;
+            text-align-last: center;
+            line-height: 180%;
+            font-size: 1.7rem;
+        }
+
+    }
+
+
+}
+
+//Smartphones
+@include mediaSm {
+
+    main#about,
+    main#home,
+    main#work {
+        padding: 20px 20px 0 20px;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding: 0.2rem 0;
+        }
+    }
+
+    main#home {
+        padding: 100px 20px;
+    }
+
+    .about-info {
+        padding-top: 1rem;
+    }
+
+    .bio {
+        font-size: 1.2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .bio-image {
+        height: 20vh;
+    }
+
+    main#work {
+        h1 {
+            margin-top: 10vh;
+        }
+    }
+
+    .projects {
+        padding-top: 2rem;
+    }
+}
