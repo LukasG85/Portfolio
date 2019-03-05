@@ -12,7 +12,7 @@ const WORKS = graphql`
           title
           id
           img {
-            fluid(maxWidth: 300, maxHeight: 200) {
+            fluid(maxWidth: 320, maxHeight: 200) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
