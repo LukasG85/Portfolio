@@ -37,6 +37,7 @@ export default class work extends Component {
               query={WORKS}
               render={data => {
                 const products = data.items.edges;
+                // Show all projects
                 return products.map(item => {
                   return <Project key={item.node.id} product={item.node} />;
                 });
