@@ -3,18 +3,21 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Icons from "../components/global/SocialIcons";
 import Typing from "../components/global/Typing";
+import HeadingText from "../components/headingText";
+import Head from "../components/Head";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`Front End Developer`, `Web Developer`]} />
     <main className="home">
-      <h1 className="lg-heading">
-        Łukasz <span className="text-secondary">Gancarz</span>
-      </h1>
-      <Typing />
-      <div className="icons">
-        <Icons />
+      <div className="home-info">
+        <HeadingText title="Łukasz" subtitle="Gancarz" />
+        <Typing />
+        <div className="icons">
+          <Icons />
+        </div>
       </div>
+      <Head />
     </main>
   </Layout>
 );

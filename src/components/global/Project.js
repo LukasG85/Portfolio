@@ -1,4 +1,6 @@
 import React from "react";
+import Tilt from "react-tilt";
+
 import Img from "gatsby-image";
 
 export default function Product({ product }) {
@@ -6,11 +8,18 @@ export default function Product({ product }) {
   const { fluid } = product.img;
 
   return (
-    <div className="item">
-      <a className="image" href={url} target="_blank" rel="noopener noreferrer">
-        <p>{title}</p>
-        <Img fluid={fluid} alt="Project" />
-      </a>
-    </div>
+    <Tilt className="Tilt" options={{ max: 20, scale: 1, reverse: true }}>
+      <div className="Tilt-inner item">
+        <a
+          className="image"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>{title}</p>
+          <Img fluid={fluid} alt="Project" />
+        </a>
+      </div>
+    </Tilt>
   );
 }

@@ -13,12 +13,12 @@ export default class Navigation extends Component {
       {
         id: 2,
         path: "/about/",
-        name: "O mnie"
+        name: "About me"
       },
       {
         id: 3,
         path: "/work/",
-        name: "Projekty"
+        name: "Projects"
       }
     ]
   };

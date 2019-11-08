@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Project from "../components/global/Project";
+import HeadingText from "../components/headingText";
 
 const WORKS = graphql`
   {
@@ -12,7 +13,7 @@ const WORKS = graphql`
           title
           id
           img {
-            fluid(maxWidth: 320, maxHeight: 200) {
+            fluid(maxWidth: 960, maxHeight: 630) {
               ...GatsbyContentfulFluid
             }
           }
@@ -29,9 +30,7 @@ export default class work extends Component {
       <Layout>
         <SEO title="Work" />
         <main className="work">
-          <h1 className="lg-heading">
-            Moje <span className="text-secondary">projekty</span>
-          </h1>
+          <HeadingText title="My" subtitle="projects" />
           <div className="projects">
             <StaticQuery
               query={WORKS}
